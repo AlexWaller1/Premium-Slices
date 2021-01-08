@@ -6,5 +6,6 @@
    <p><%= place.description %></p>
    <img src="<%= place.image %>" alt="pizza image">
    <% #If the currently logged in user created this pizza place: %>
+   <% if session[:user_id] == place.user.id %>
    <a href="/places/<%= place.id %>/edit">Edit</a>
    <% end %>
