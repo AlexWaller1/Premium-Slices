@@ -15,7 +15,7 @@ end
     # Create
     # make a post request to '/places'
     post '/places' do
-        User.find_by(id: session[:user_id]).places.build(params)
+        current_pizza.places.build(params)
         if !place.title.empty? && !place.description.empty?
             place.save
             redirect '/places'

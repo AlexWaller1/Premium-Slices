@@ -14,7 +14,11 @@ class ApplicationController < Sinatra::Base
   end
 
   def logged_in?
-    !!User.find_by(id: session[:user_id])
+    !!current_pizza
+  end
+
+  def current_pizza
+    User.find_by(id: session[:user_id])
   end
 
 end
