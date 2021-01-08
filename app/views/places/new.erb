@@ -1,0 +1,13 @@
+<h1>Tell Us About Your Favorite Pizza Place</h1>
+<p><%= @error %></p>
+<form action="/places" method="post">
+      <label>Title</label>
+      <input type="text" name="title">
+      <label>Address</label>
+      <input type="text" name="address">
+      <label>Description</label>
+      <textarea type="textarea" name="description"></textarea>
+      <label>Image URL</label>
+      <input type="text" name="image">
+      <button type="submit">Add Pizza Place</button>
+</form>
