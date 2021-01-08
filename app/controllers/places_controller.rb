@@ -57,8 +57,12 @@ end
     # Edit
     # make a get request to '/pizzaplaces/:id/edit'
     get '/places/:id/edit' do
+        if logged_in?
         @place = Place.find(params["id"])
         erb :'/places/edit'
+        else
+            redirect '/login'
+        end
     end
 
     # Update
