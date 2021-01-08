@@ -1,5 +1,5 @@
 class PlacesController < ApplicationController
-    before_action :logged_in?
+    
     #Create Pizza Place
 
     #New
