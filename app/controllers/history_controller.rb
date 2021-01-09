@@ -1,3 +1,0 @@
-class HistoryController < ApplicationController
-
-end
