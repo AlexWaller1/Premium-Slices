@@ -3,7 +3,7 @@
 <% @places.each do |place| %>
    <h2><a href="/places/<%= place.id %>"><%= place.title %></a></h2>
    <h3><%= place.address %></h3>
-   <p><%= place.description %></p>
+  
    <img src="<%= place.image %>" alt="pizza image">
    <% #If the currently logged in user created this pizza place: %>
    <% if place.user && session[:user_id] == place.user.id %>

@@ -1,5 +1,5 @@
 <h1><%= @place.title %></h1>
-<h2><%= @place.description %></h2>
+<p><%= @place.description %></p>
 <img src="<%= @place.image %>" alt="tremendous pizza image">
 <form action="/places/<%= @place.id %>" method="post">
      <input type="hidden" name="_method" value="delete">
