@@ -1,1 +1,3 @@
 class HistoryController < ApplicationController
+
+end
