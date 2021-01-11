@@ -100,22 +100,22 @@ end
 #end
 #end
 
-#post '/places' do
+#post '/art' do
     #place = current_pizza.places.build(params)
      #if !place.title.empty? && !place.description.empty?
          #place.save
          #redirect '/places'
      #else
          #@error = "Hey! Give us more information!"
-         #erb :'places/new'
+         #erb :'art/new'
      #end
  #end
 
- #get '/places' do
+ #get '/art' do
     #if logged_in?
     
        # @places = Place.all.reverse
-       # erb :'places/index'
+       # erb :'art/index'
    # else
         #redirect '/login'
     #end
