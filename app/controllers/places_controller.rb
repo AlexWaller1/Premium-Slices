@@ -97,7 +97,7 @@ end
         #erb :'/art/new'
     #else
         #redirect '/login'
-#end
+   #end
 #end
 
 #post '/art' do
@@ -121,5 +121,12 @@ end
     #end
 #end
 
-
+#get '/places/:id' do
+    #if logged_in?
+        #@place = Place.find(params["id"])
+        #erb :'places/show'
+    #else
+        #redirect '/login'
+    #end
+#end
 
