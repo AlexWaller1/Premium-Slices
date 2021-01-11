@@ -111,5 +111,15 @@ end
      #end
  #end
 
+ #get '/places' do
+    #if logged_in?
+    
+       # @places = Place.all.reverse
+       # erb :'places/index'
+   # else
+        #redirect '/login'
+    #end
+#end
+
 
 
