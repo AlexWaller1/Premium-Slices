@@ -8,6 +8,8 @@
 * build views (forms)
 * build navigation
 * validations
+* build is an alias of new
+* build is good for working with an unsaved object
 
  * patch '/places/:id' do
        * @place = Place.find(params["id"])
