@@ -101,10 +101,10 @@ end
 #end
 
 #post '/art' do
-    #place = current_pizza.places.build(params)
+    #art = current_pizza.places.build(params)
      #if !place.title.empty? && !place.description.empty?
          #place.save
-         #redirect '/places'
+         #redirect '/art'
      #else
          #@error = "Hey! Give us more information!"
          #erb :'art/new'
