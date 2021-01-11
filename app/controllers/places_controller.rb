@@ -89,6 +89,7 @@ end
         place = Place.find(params[:id])
         place.destroy
         redirect '/places'
-    end
+      
+end
 end
 
