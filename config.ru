@@ -7,6 +7,7 @@ end
 use Rack::MethodOverride
 
 use SessionsController
+use ArtController
 use UsersController
 use PlacesController
 run ApplicationController
