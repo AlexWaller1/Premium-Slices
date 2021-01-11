@@ -1,5 +1,6 @@
 <h1>Pizza Art</h1>
-<a href="/places/new">Submit Your Amazing Artwork!</a>
+<h2>We Want to See the Amazing Art that Pizza Inspires</h2>
+<a href="/art/new">Submit Your Amazing Artwork!</a>
 <% @places.each do |place| %>
    <h2><a href="/art/<%= place.id %>"><%= place.title %></a></h2>
    <h3><%= place.address %></h3>
