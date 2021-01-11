@@ -1,0 +1,12 @@
+<h1>Pizza Art</h1>
+<a href="/places/new">Submit Your Amazing Artwork!</a>
+<% @places.each do |place| %>
+   <h2><a href="/art/<%= place.id %>"><%= place.title %></a></h2>
+   <h3><%= place.address %></h3>
+  
+   <img src="<%= place.image %>" alt="pizza image">
+   <% #If the currently logged in user created this pizza place: %>
+   <% if place.user && session[:user_id] == place.user.id %>
+   <a href="/art/<%= place.id %>/edit">Edit Your Artwork</a>
+     <% end %>
+   <% end %>
