@@ -1,14 +1,14 @@
 <h1>Edit Information for <%= @place.title %></h1>
 <h2>We Want To See That Awesome Art!</h2>
 <p><%= @error %></p>
-<form action="/places/<%=@place.id%>" method="post">
+<form action="/art/<%=@place.id%>" method="post">
      <input type="hidden" name="_method" value="patch"> 
       <label>Title</label>
       <input type="text" name="place[title]" value="<%= @place.title %>">
-      <label>Address</label>
+      
      
-      <input type="textarea" name="place[description]" value="<%= @place.description %>">
+     
       <label>Image URL</label>
       <input type="text" name="place[image]" value="<%= @place.image%>">
-      <button type="submit">Edit Pizza Place</button>
+      <button type="submit">Edit Artwork</button>
 </form>
