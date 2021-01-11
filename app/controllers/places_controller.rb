@@ -91,3 +91,25 @@ end
         redirect '/places'
     end
 end
+
+#get '/art/new' do
+    #if logged_in?
+        #erb :'/art/new'
+    #else
+        #redirect '/login'
+#end
+#end
+
+#post '/places' do
+    #place = current_pizza.places.build(params)
+     #if !place.title.empty? && !place.description.empty?
+         #place.save
+         #redirect '/places'
+     #else
+         #@error = "Hey! Give us more information!"
+         #erb :'places/new'
+     #end
+ #end
+
+
+
