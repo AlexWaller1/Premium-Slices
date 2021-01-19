@@ -19,15 +19,15 @@ class ArtController < ApplicationController
      #end
  #end
 
- #get '/art' do
-    #if logged_in?
+ get '/art' do
+    if logged_in?
     
-       # @places = Place.all.reverse
-       # erb :'art/index'
-   # else
-        #redirect '/login'
-    #end
-#end
+        @places = Place.all.reverse
+        erb :'art/index'
+    else
+        redirect '/login'
+    end
+end
 
 #get '/places/:id' do
     #if logged_in?
