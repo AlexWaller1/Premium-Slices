@@ -1,12 +1,6 @@
 class ArtController < ApplicationController
 
-    get '/art/new' do
-    if logged_in?
-        erb :'/art/new'
-    else
-        redirect '/login'
-   end
-end
+   
 
 #post '/art' do
     #art = current_pizza.places.build(params)
