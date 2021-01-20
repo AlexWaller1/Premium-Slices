@@ -11,9 +11,7 @@ class ArtController < ApplicationController
         erb :'art/index'
     else
         redirect '/login'
+       end
     end
-end
 
-
-
-end
+ end

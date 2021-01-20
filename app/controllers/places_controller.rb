@@ -9,8 +9,8 @@ class PlacesController < ApplicationController
             erb :'/places/new'
         else
             redirect '/login'
+        end
     end
-end
     
     # Create
     # make a post request to '/places'
@@ -62,8 +62,8 @@ end
     # make a get request to '/pizzaplaces/:id/edit'
     get '/places/:id/edit' do
         if logged_in?
-        @place = Place.find(params["id"])
-        erb :'/places/edit'
+          @place = Place.find(params["id"])
+          erb :'/places/edit'
         else
             redirect '/login'
         end
@@ -72,17 +72,17 @@ end
     # Update
     # make a patch request to '/places/:id'
     patch '/places/:id' do
-        #may take out @ symbols later
+       #may take out @ symbols later
        @place = Place.find(params["id"])
        if !params["place"]["title"].empty? && !params["place"]["description"].empty?
-       @place.update(params["place"])
-       redirect "/places/#{params["id"]}"
+        @place.update(params["place"])
+        redirect "/places/#{params["id"]}"
        else
         @error = "Hey! Give us more information!"
         erb :'places/edit'
-    end
+       end
     #place.update(title: params["title"], address: params["address"], description: params["description"], image: params["image"])
-end
+    end
 
 
 
@@ -94,6 +94,6 @@ end
         place.destroy
         redirect '/places'
       
-end
-end
+       end
+    end
 
