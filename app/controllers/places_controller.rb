@@ -45,8 +45,12 @@ end
 
     get '/places/:id' do
         if logged_in?
-            @place = Place.find(params["id"])
-            erb :'places/show'
+            @place = Place.find_by(id: params["id"])
+            if @place
+             erb :'places/show'
+            else
+                redirect '/places'
+            end
         else
             redirect '/login'
         end

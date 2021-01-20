@@ -9,6 +9,10 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
   end
 
+not_found do
+  redirect '/places'
+end
+
   get "/" do
     erb :welcome
   end
@@ -20,5 +24,6 @@ class ApplicationController < Sinatra::Base
   def current_pizza
     User.find_by(id: session[:user_id])
   end
+  
 
 end
