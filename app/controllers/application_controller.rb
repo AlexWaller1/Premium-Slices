@@ -10,7 +10,7 @@ class ApplicationController < Sinatra::Base
   end
 
 not_found do
-  redirect '/places'
+  redirect '/'
 end
 
   get "/" do
