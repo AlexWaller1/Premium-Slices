@@ -15,7 +15,7 @@ class PlacesController < ApplicationController
     # Create
     # make a post request to '/places'
     post '/places' do
-       place = current_pizza.places.build(params)
+       place = current_user.places.build(params)
         if !place.title.empty? && !place.description.empty?
             place.save
             redirect '/places'

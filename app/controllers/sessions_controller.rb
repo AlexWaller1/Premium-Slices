@@ -22,9 +22,9 @@ class SessionsController < ApplicationController
           # users can log out
 
 
-get '/logout' do
-    session.clear
-    redirect '/'
-  end
+         get '/logout' do
+           session.clear
+           redirect '/'
+          end
 
 end

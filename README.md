@@ -24,7 +24,7 @@
     * place.update(title: params["title"], address: params["address"], description: params["description"], image: params["image"])
 * end
 
-*this works if edit page fails again
+* this works if edit page fails again
 
 
    
