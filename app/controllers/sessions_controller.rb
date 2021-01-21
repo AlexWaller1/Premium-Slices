@@ -9,7 +9,10 @@ class SessionsController < ApplicationController
                 @error = "Hey! Who Are You!?"
                 erb :'users/login'
             else
-               if user = User.find_by(username: params["username"], password: params["password"])
+               #if user = User.find_by(username: params["username"], password: params["password"])
+                  user = User.find_by(username: params["username"])
+                  if  user && user.authenticate(params["password"])  
+              
                      session[:user_id] = user.id
                      redirect '/places'
                else
