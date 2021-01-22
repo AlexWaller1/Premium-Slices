@@ -1,30 +1,6 @@
-# TODO
-* create migrations
-* create models with relationships
-* plan out routes for controller following restful conventions and map to CRUD actions
-* build controller actions and views simulataneously
-* adding user authentication
-* add user authorization
-* build views (forms)
-* build navigation
-* validations
-* build is an alias of new
-* build is good for working with an unsaved object
+Premium Slices
 
- * patch '/places/:id' do
-       * @place = Place.find(params["id"])
-       * if !place.title.empty? && !place.description.empty?
-       * place.update
-       * redirect '/places'
-       
-    * else
-        * @error = "Hey! Give us more information!"
-        * erb :'places/edit'
-    * end
-    * place.update(title: params["title"], address: params["address"], description: params["description"], image: params["image"])
-* end
-
-* this works if edit page fails again
+Welcome to Premium Slices, an app where you can share your Pizza Places with the world, and where you can learn about the favorite Pizza Places of your fellow Pizza lovers!
 
 
-   
+
