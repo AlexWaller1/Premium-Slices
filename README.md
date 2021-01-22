@@ -16,5 +16,23 @@ Second, in order for the application to run, the terminal must be running shotgu
 
 $ shotgun
 
+# Usage
+
+
+# Development
+
+
+# Contributing
+
+
+# Liscense
+
+
+# Code of Conduct
+
+
+
+
+
 
 

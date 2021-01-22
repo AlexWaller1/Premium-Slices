@@ -22,12 +22,14 @@ class SessionsController < ApplicationController
             end
          end
     
-         
-
-
          get '/logout' do
            session.clear
            redirect '/'
+          end
+
+          get '/terminate' do
+          current_user.destroy
+          redirect '/'
           end
 
 end
