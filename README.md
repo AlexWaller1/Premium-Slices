@@ -18,17 +18,26 @@ $ shotgun
 
 # Usage
 
+As long as the previous steps have been implemented, you will now be on the home page of Premium Slices. We are happy to have you and enthusiastic about your future contributions. In order to proceed any further you will need to sign up with a username and a password. If you happen to already have an account, then click login and you can enter your credentials there. Once you have signed up or logged in, you can then view others submissions as well as make your own submissions. You will also be able to edit and take down your submissions.
+
 
 # Development
+
+Just remember to run bundle install and then shotgun first and foremost. It is very important to remember that shotgun must be running in order to view this app. The url port that is available is always localhost:93939 
 
 
 # Contributing
 
+Contributions that improve this app are welcome. Contributions can be made here https://github.com/AlexWaller1/Premium-Slices . All collaborators are expected to adhere to the code of conduct
 
 # Liscense
 
+This app is available as open source under the terms of the MIT Liscense
+
 
 # Code of Conduct
+
+Anyone participating on Premium Slices in any way must adhere to the code of conduct.
 
 
 
