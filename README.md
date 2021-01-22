@@ -32,7 +32,7 @@ Contributions that improve this app are welcome. Contributions can be made here 
 
 # Liscense
 
-This app is available as open source under the terms of the MIT Liscense
+This app is available as open source under the terms of the MIT Liscense. You can see the liscense in the readme_liscense folder of this repository.
 
 
 # Code of Conduct
