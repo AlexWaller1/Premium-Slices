@@ -1,9 +1,6 @@
 class PlacesController < ApplicationController
     
-    #Create Pizza Place
-
-    #New
-    # make a get request to '/places/new'
+    
     get '/places/new' do
         if logged_in?
             erb :'/places/new'
@@ -12,8 +9,7 @@ class PlacesController < ApplicationController
         end
     end
     
-    # Create
-    # make a post request to '/places'
+    
     post '/places' do
        place = current_user.places.build(params)
         if !place.title.empty? && !place.description.empty?
@@ -25,11 +21,7 @@ class PlacesController < ApplicationController
         end
     end
 
-    #Read Pizza Place
-   
-    #index
-    # make a get request to '/pizzaplaces'
-
+    
     get '/places' do
         if logged_in?
         
@@ -40,8 +32,7 @@ class PlacesController < ApplicationController
         end
     end
 
-    #show
-    # make a get request to '/pizzaplaces/:id'
+   
 
     get '/places/:id' do
         if logged_in?
@@ -56,10 +47,7 @@ class PlacesController < ApplicationController
         end
     end
 
-    #Update Pizza Place
-
-    # Edit
-    # make a get request to '/pizzaplaces/:id/edit'
+   
     get '/places/:id/edit' do
         if logged_in?
           @place = Place.find(params["id"])
@@ -69,10 +57,9 @@ class PlacesController < ApplicationController
         end
     end
 
-    # Update
-    # make a patch request to '/places/:id'
+   
     patch '/places/:id' do
-       #may take out @ symbols later
+       
        @place = Place.find(params["id"])
        if !params["place"]["title"].empty? && !params["place"]["description"].empty?
         @place.update(params["place"])
@@ -81,14 +68,12 @@ class PlacesController < ApplicationController
         @error = "Hey! Give us more information!"
         erb :'places/edit'
        end
-    #place.update(title: params["title"], address: params["address"], description: params["description"], image: params["image"])
+   
     end
 
 
 
-    #Destroy Pizza Place
-
-    # make a delete request to '/places/:id'
+    
     delete '/places/:id' do
         place = Place.find(params[:id])
         place.destroy

@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-          # users can log in
+         
           get '/login' do
               erb :'users/login'
           end
@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
                 @error = "Hey! Who Are You!?"
                 erb :'users/login'
             else
-               #if user = User.find_by(username: params["username"], password: params["password"])
+              
                   user = User.find_by(username: params["username"])
                   if  user && user.authenticate(params["password"])  
               
@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
             end
          end
     
-          # users can log out
+         
 
 
          get '/logout' do
