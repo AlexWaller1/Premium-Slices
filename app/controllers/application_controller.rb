@@ -18,12 +18,14 @@ end
   end
 
   def logged_in?
-    !!current_user
+    !!current_user 
   end
 
   def current_user
-    User.find_by(id: session[:user_id])
+    User.find_by(id: session[:user_id]) 
   end
+
+  #ask about this!!!
   
 
 end

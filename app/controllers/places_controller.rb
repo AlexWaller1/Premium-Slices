@@ -49,11 +49,16 @@ class PlacesController < ApplicationController
 
    
     get '/places/:id/edit' do
-        if logged_in?
-          @place = Place.find(params["id"])
+        
+            
+        @place = Place.find(params["id"]) 
+        if current_user == @place.user 
+          
           erb :'/places/edit'
+         
+         
         else
-            redirect '/login'
+            redirect '/places'
         end
     end
 
@@ -61,7 +66,8 @@ class PlacesController < ApplicationController
     patch '/places/:id' do
        
        @place = Place.find(params["id"])
-       if !params["place"]["title"].empty? && !params["place"]["description"].empty?
+       
+        if !params["place"]["title"].empty? && !params["place"]["description"].empty? && current_user == @place.user
         @place.update(params["place"])
         redirect "/places/#{params["id"]}"
        else
@@ -75,10 +81,18 @@ class PlacesController < ApplicationController
 
     
     delete '/places/:id' do
+        
+        
         place = Place.find(params[:id])
+        if current_user == place.user
         place.destroy
         redirect '/places'
-      
-       end
+
+        else
+        redirect '/places/:id'
+        
+         end
+      end
+    
     end
 

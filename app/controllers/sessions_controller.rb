@@ -27,9 +27,6 @@ class SessionsController < ApplicationController
            redirect '/'
           end
 
-          get '/terminate' do
-          current_user.destroy
-          redirect '/'
-          end
+          
 
 end
