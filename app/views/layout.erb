@@ -17,13 +17,15 @@
     <div>
        <div><a href="/places">Pizza Places</a></div>
        <div><a href="/">Home</a></div> 
+       <% if !current_user %>
        <div><a href="/signup">Sign Up</a></div>
        <div><a href="/login">Log In</a></div>
+       <% end %>
        <div><a href="/logout">Log Out</a></div>
        <div><a href="/places/new">Submit a New Pizza Place!</a></div>
        <div><a href="/art">See the Cool Art</a></div>
+       </div>
        
-    </div>
     <div class="wrapper">
 
         <%= yield %>
