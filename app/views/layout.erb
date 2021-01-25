@@ -21,7 +21,9 @@
        <div><a href="/signup">Sign Up</a></div>
        <div><a href="/login">Log In</a></div>
        <% end %>
+       <% if logged_in? %>
        <div><a href="/logout">Log Out</a></div>
+       <% end %>
        <div><a href="/places/new">Submit a New Pizza Place!</a></div>
        <div><a href="/art">See the Cool Art</a></div>
        </div>
