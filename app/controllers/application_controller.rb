@@ -25,7 +25,7 @@ end
     User.find_by(id: session[:user_id]) 
   end
 
-  #ask about this!!!
+  
   
 
 end

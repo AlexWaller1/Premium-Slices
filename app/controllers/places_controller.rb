@@ -2,18 +2,19 @@ class PlacesController < ApplicationController
     
     
     get '/places/new' do
-        if logged_in?
-            erb :'/places/new'
-        else
-            redirect '/login'
-        end
+        logged_in? ? (erb :'/places/new') : (redirect '/login')
+        #if logged_in?
+            #erb :'/places/new'
+       # else
+            #edirect '/login'
+        #end
     end
     
     
     post '/places' do
        place = current_user.places.build(params)
-        if !place.title.empty? && !place.description.empty?
-            place.save
+        if place.save
+            
             redirect '/places'
         else
             @error = "Hey! Give us more information!"
@@ -67,12 +68,15 @@ class PlacesController < ApplicationController
        
        @place = Place.find(params["id"])
        
-        if !params["place"]["title"].empty? && !params["place"]["description"].empty? && current_user == @place.user
-        @place.update(params["place"])
-        redirect "/places/#{params["id"]}"
+        if current_user == @place.user
+         if @place.update(params["place"])
+         redirect "/places/#{params["id"]}"
+         else
+            @error = "Hey! Give us more information!"
+            erb :'places/edit'
+         end
        else
-        @error = "Hey! Give us more information!"
-        erb :'places/edit'
+       redirect '/places'
        end
    
     end
@@ -93,6 +97,13 @@ class PlacesController < ApplicationController
         
          end
       end
+
+      private
+
+      def place_params
+        params.require(:place).permit(:description, :address, :title, :image)
+      end
     
     end
 
+#
