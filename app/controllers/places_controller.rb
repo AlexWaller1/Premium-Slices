@@ -69,16 +69,14 @@ class PlacesController < ApplicationController
        
        @place = Place.find(params["id"])
        
-        if current_user == @place.user
+          redirect_if_not_owner
          if @place.update(params["place"])
          redirect "/places/#{params["id"]}"
          else
             @error = "Hey! Give us more information!"
             erb :'places/edit'
          end
-       else
-       redirect '/places'
-       end
+       
    
     end
 
